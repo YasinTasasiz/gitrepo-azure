@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: fatihkgmgitrepoazure 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fatihkgmgitrepoazure
+  template:
+    metadata:
+      labels:
+        app: fatihkgmgitrepoazure 
+    spec:
+      containers:
+        - name: fatihkgmgitrepoazure 
+          image: felixgokmenproject.azurecr.io/fatihkgmgitrepoazure
+          ports:
+          - containerPort: 80
